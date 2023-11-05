@@ -155,16 +155,16 @@ const calculateAverageAge = (mitarbeiter) => {
 }   
 
 //4. Gib die Namen und Abteilungen aller Mitarbeiter in der Konsole aus.
-const getnNamesAndDepartments = (mitarbeiter) => mitarbeiter
+const getNamesAndDepartments = (mitarbeiter) => mitarbeiter
     .forEach((item) => console.log(`Name: ${item.firstname}, Abteilung: ${item.department}`))
 
 //5. Sortiere die Mitarbeiter nach ihrem Alter in aufsteigender Reihenfolge.
 const sortEmployeesByAge = (mitarbeiter) =>  mitarbeiter.sort((a,b) => a.age - b.age)
 
 //6. Finde den jüngsten Mitarbeiter, der die Rolle "team lead" hat.
-const findTheYoungestTemmlead = (mitarbeiter) => {
+const findTheYoungestTeamlead = (mitarbeiter) => {
     const sortedListByAge = sortEmployeesByAge(mitarbeiter)
-    return sortedList.find((item) => item.role == "team lead")
+    return sortedList.find((item) => item.role === "team lead")
 }
 
 //7. Überprüfe, ob mindestens ein Mitarbeiter Hobbys hat, die mit "Cooking" beginnen.
@@ -176,8 +176,8 @@ const areAllOlderThan18 = (mitarbeiter) => mitarbeiter.every((item) => item.age 
 //1 console.log(findEmployeesOlderThan30(mitarbeiter))
 //2 console.log(allFirstnames(mitarbeiter))
 //3 console.log(calculateAverageAge(mitarbeiter))
-//4 getnNamesAndDepartments(mitarbeiter)
+//4 getNamesAndDepartments(mitarbeiter)
 //5 console.log(sortEmployeesByAge(mitarbeiter))
-//6 console.log(findTheYoungestTemmlead(mitarbeiter))
+//6 console.log(findTheYoungestTeamlead(mitarbeiter))
 //7 console.log(isThereWhoLikesCooking(mitarbeiter))
 //8 console.log(areAllOlderThan18(mitarbeiter))
